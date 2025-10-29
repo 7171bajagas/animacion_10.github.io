@@ -1,0 +1,54 @@
+/* Variables de colores */
+:root {
+    --background: rgb(0, 0, 0);
+    --dark: rgb(234, 234, 234);
+}
+
+/* Estilo global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+}
+
+/* Contenedor centrado */
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja simple (sin cuadros ni círculos adicionales) */
+.box-liquido {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border: 3px solid var(--dark);
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Imagen giratoria */
+.box-liquido img.giratoria {
+    width: 120px;
+    height: 120px;
+    animation: girar 5s linear infinite;
+}
+
+/* Animación de giro */
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
